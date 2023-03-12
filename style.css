@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif&family=Sono:wght@500&family=Varela+Round&display=swap");
+
+:root {
+  --primary-color: #22254b;
+  --secondary-color: #373b69;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--primary-color);
+  font-family: "Varela Round", sans-serif;
+}
+
+header {
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  background: var(--secondary-color);
+}
+
+.search {
+  background-color: transparent;
+  border: 2px solid var(--primary-color);
+  border-radius: 50px;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  color: rgb(207, 214, 221);
+}
+.search::placeholder {
+  color: aliceblue;
+}
+
+.search:focus {
+  outline: none;
+  background-color: var(--primary-color);
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.movie {
+  width: 300px;
+  margin: 1rem;
+  background-color: var(--secondary-color);
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.movie img {
+  width: 100%;
+}
+.movie-info {
+  color: antiquewhite;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem 1rem;
+  letter-spacing: 0.25px;
+}
+
+.movie-info h3 {
+  font-family: "PT Serif", serif;
+  letter-spacing: 2.5px;
+  margin-top: 0;
+}
+.movie-info span {
+  font-family: "Sono", sans-serif;
+  background: var(--primary-color);
+  padding: 0.25rem 0.5rem;
+  border-radius: 3.5px;
+}
+.movie-info span.yellow {
+  color: rgb(194, 151, 86);
+}
+.movie-info span.green {
+  color: rgb(31, 120, 21);
+}
+.movie-info span.red {
+  color: rgb(53, 5, 5);
+}
+
+.overview {
+  background-color: aliceblue;
+  padding: 2rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  max-height: 100%;
+  transform: translateY(101%);
+  transition: transform 0.3s ease-in;
+}
+.movie:hover .overview {
+  transform: translateY(0);
+}
